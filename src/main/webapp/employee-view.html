@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+<div class="jumbotron text-center" > Welcome Employee </div>
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">View Past Tickets</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="modal" data-target="#exampleModal" id="add-new-ticket"href="#">Add New Ticket</a>
+  </li>
+  <!-- <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li> -->
+</ul>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Ticket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<form id="ticketForm">
+	<div class="form-check">
+		<!-- <label> </label> -->
+		<div> I am seeking reimbursement for...
+		</div>
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="issueTypeInput" value="lodging">
+  <label class="form-check-label" for="exampleRadios1">
+  	Lodging
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="travelRadioInput" value="travel">
+  <label class="form-check-label" for="exampleRadios2">
+  	Travel
+  </label>
+</div> 
+<div class="form-check">
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="foodRadioInput" value="food">
+  <label class="form-check-label" for="exampleRadios2">
+  	Food
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="otherRadioInput" value="other">
+  <label class="form-check-label" for="exampleRadios2">
+  	Other
+  </label>
+</div>  
+<br>
+  <div class="form-group">
+  	<label for="description of ticket">Describe the issue.</label>
+  	<textarea type="text" name="description" class="form-control" id="descriptionInput" aria-describedby="description" placeholder="Enter description"></textarea>
+
+   </div>
+
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="submit-btn" data-dismiss="modal" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="employee.js"></script>
+</body>
+</html>

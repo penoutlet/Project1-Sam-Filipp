@@ -1,8 +1,16 @@
+DROP TABLE reimbursements;
+DROP TABLE users_table;
+DROP TABLE reimbusement_type;
+DROP TABLE reimbursement_status;
+DROP TABLE reimbursements;
+DROP TABLE user_roles;
+
 CREATE TABLE reimbursements (
     reimb_id NUMBER(10) PRIMARY KEY,
     reimb_amount NUMBER(10) NOT NULL,
     reimb_submitted TIMESTAMP,
     reimb_resolved TIMESTAMP,
+    reimb_description VARCHAR2(250),
     reimb_receipt BLOB,
     reimb_author NUMBER(10),
     reimb_resolver NUMBER(10),
@@ -27,6 +35,8 @@ CREATE TABLE users_table (
     CONSTRAINT role_id_fk FOREIGN KEY (user_role_id) REFERENCES user_roles(user_role_id)
     ON DELETE CASCADE
     );
+ALTER TABLE users_table
+ADD CONSTRAINT unique_fields UNIQUE(username,email);
     
 CREATE TABLE reimbursement_status (
     reimb_status_id NUMBER(10) PRIMARY KEY,
@@ -37,7 +47,8 @@ CREATE TABLE reimbursement_type (
     reimb_type      VARCHAR2(10) NOT NULL
     );
 CREATE TABLE user_roles (
-    user_role_id NUMBER(4) PRIMARY KEY,
-    user_role   VARCHAR2(10) NOT NULL
+    user_role_id NUMBER PRIMARY KEY,
+    user_role   VARCHAR2(50) NOT NULL
     );
-    
+   INSERT INTO users_table VALUES(1,'user','pass','Sam','Filipp','email@email.com',1); 
+   INSERT INTO user_roles VALUES(1,'employee');
