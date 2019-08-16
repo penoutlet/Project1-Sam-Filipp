@@ -35,10 +35,9 @@ CREATE TABLE ReimbursementStatus(
     reimb_status VARCHAR2(100)
 );
 
-CREATE TABLE ReinbursementType(
+CREATE TABLE ReimbursementType(
     reimb_type_id NUMBER PRIMARY KEY,
     reimb_type VARCHAR2(100)
 );
-
 
 SELECT * FROM Reimbursement;
