@@ -9,7 +9,7 @@ loginForm.addEventListener("submit", function(e){
 	let userObj = {}
 	userObj.username = username;
 	userObj.password = password;
-	alert("User created successfully!")
+	alert("Login attempted! Check the console to see the login object")
 	console.log(userObj)
 
 })
