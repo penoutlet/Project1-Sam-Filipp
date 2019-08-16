@@ -2,7 +2,7 @@ package com.models;
 
 import java.sql.Blob;
 
-public class Reinbursement {
+public class Reimbursement {
 	int reimbId;
 	double amount;
 	String submitted;
@@ -14,11 +14,11 @@ public class Reinbursement {
 	int statusId;
 	int typeId;
 	
-	public Reinbursement() {
+	public Reimbursement() {
 		
 	}
 	
-	public Reinbursement(int reimbId, double amount, String submitted, String resolved, String description,
+	public Reimbursement(int reimbId, double amount, String submitted, String resolved, String description,
 			Blob receipt, int author, int resolver, int statusId, int typeId) {
 		super();
 		this.reimbId = reimbId;
