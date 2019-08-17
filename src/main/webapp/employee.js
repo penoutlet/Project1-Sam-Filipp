@@ -9,7 +9,8 @@ addbtn.addEventListener("click", function(){
 
 let submitBtn = document.getElementById("submit-btn")
   
-submitBtn.addEventListener("click", function(){
+submitBtn.addEventListener("click", function(e){
+  e.preventDefault();
   let ticketArea = document.getElementById("ticket-area");
   let ticketObj = {}
   let description = document.getElementById("descriptionInput").value
