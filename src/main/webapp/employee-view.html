@@ -35,8 +35,19 @@
     <a class="nav-link disabled" href="#">Disabled</a>
   </li> -->
 </ul>
-
-
+<!-- This is where the reimbursement request tickets will populate -->
+<div class="row col-lg-8 center" id="ticket-area">
+<div class="card" style="width: 60rem;">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Welcome Employee</h6>
+      <p class="card-text">Review your tickets or create a new ticket.</p>
+      <a href="#" class="card-link">Ticket Author</a>
+      <a href="#" class="card-link">Resolved by...</a>
+    </div>
+  </div>
+  
+</div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -53,25 +64,25 @@
 		<!-- <label> </label> -->
 		<div> I am seeking reimbursement for...
 		</div>
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="issueTypeInput" value="lodging">
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="issueTypeInput" value="Lodging">
   <label class="form-check-label" for="exampleRadios1">
   	Lodging
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="travelRadioInput" value="travel">
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="travelRadioInput" value="Travel">
   <label class="form-check-label" for="exampleRadios2">
   	Travel
   </label>
 </div> 
 <div class="form-check">
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="foodRadioInput" value="food">
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="foodRadioInput" value="Food">
   <label class="form-check-label" for="exampleRadios2">
   	Food
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="otherRadioInput" value="other">
+  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="otherRadioInput" value="Other">
   <label class="form-check-label" for="exampleRadios2">
   	Other
   </label>
@@ -79,8 +90,12 @@
 <br>
   <div class="form-group">
   	<label for="description of ticket">Describe the issue.</label>
-  	<textarea type="text" name="description" class="form-control" id="descriptionInput" aria-describedby="description" placeholder="Enter description"></textarea>
+  	<textarea type="text" name="description" class="form-control" id="descriptionInput" aria-describedby="Description" placeholder="Enter description"></textarea>
 
+   </div>
+   <div class="form-group">
+     <label for="ticket amount"> Enter reimbursement amount</label>
+     <input type="number" name="reimbursement-amount" class="form-control" id="reimbursement-amount" aria-describedat="" placeholder="$0.00">
    </div>
 
 </form>
