@@ -53,8 +53,15 @@ body {
 }
 .approve-deny-btn {
 	margin-bottom: 15px;
+	margin-left:10px
 	margin-top: 25px;
 }
-.radios{
-	margin: 10px,10px,10px,10px;
+.fancy-radios{
+	/* margin: 10px,10px,10px,10px; */
+	margin-left:10px;
+}
+.ticket-btns {
+	/* margin:10px,10px; */
+	margin-left:10px;
+
 }
