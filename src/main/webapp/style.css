@@ -14,12 +14,15 @@
 	font-family: 'Roboto Slab', serif;
 
 }
+/* .carousel {
+	height:100px;
+} */
 body {
 	background-image: url("../../../laptop.jpg");
 }
 
 .jumbotron {
-	opacity: .4;
+	opacity: .2;
 }
 .form-check-label, .nav-link{
 	color: black;
