@@ -30,11 +30,11 @@ let checked = ""
     }
   }
 
-userObj.email = email;
-userObj.username = username;
-userObj.password = password;
-userObj.firstname = firstName;
-userObj.lastname = lastName;
+  userObj.username = username;
+  userObj.password = password;
+  userObj.firstname = firstName;
+  userObj.lastname = lastName;
+  userObj.email = email;
 userObj.user_type = checked;
 alert(JSON.stringify(userObj))
 console.log(userObj)
@@ -65,16 +65,16 @@ function navHover(){
 }
 navHover()
 
-function cardsHover(){
-  for(let i = 0; i<cards.length;i++){
+// function cardsHover(){
+//   for(let i = 0; i<cards.length;i++){
   
-  cards[i].addEventListener("mouseenter",function(){
-    this.style.opacity = 1;
-  })
+//   cards[i].addEventListener("mouseenter",function(){
+//     this.style.opacity = 1;
+//   })
 
-  cards[i].addEventListener("mouseleave",function(){
-    this.style.opacity = .6;
-  })
-}
-}
-cardsHover()
+//   cards[i].addEventListener("mouseleave",function(){
+//     this.style.opacity = .6;
+//   })
+// }
+// }
+// cardsHover()

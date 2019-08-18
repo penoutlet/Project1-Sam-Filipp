@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>ERS Registration</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="main-container"> 
@@ -18,50 +19,50 @@
             <a class="nav-link" href="employee-view.html">Employee View</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link disabled" href="finance-manager-view-.html">Finance Manager View</a>
+              <a class="nav-link" href="finance-manager.html">Finance Manager View</a>
             </li> 
         </ul>
-	<div class="container col-lg-8">
-		<div class="jumbotron text-center"> Welcome to the Registration Page!</div>
+	<div class="container">
+		<div class="jumbotron text-center"> Register </div>
 	</div>
 
 	<div id="form-container" class="col-lg-4 center">
 <form id="registerForm">
   <div class="form-group">
-    <!-- <label for="exampleInputEmail1">Email address</label> -->
-    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  </div>
-  <div class="form-group">
-  	<!-- <label for="usernameInput">Username</label> -->
+    <!-- <label for="usernameInput">Username</label> -->
   	<input type="text" name="username" class="form-control" id="usernameInput" aria-describedby="username" placeholder="Enter username">
-
-   </div>
-
+    
+  </div>
+  
   <div class="form-group">
     <!-- <label for="exampleInputPassword1">Password</label> -->
     <input type="password" class="form-control" id="passwordInput" placeholder="Password">
   </div>
   <div class="form-group">
-  	<!-- <label for="firstnameInput">First Name</label> -->
+    <!-- <label for="firstnameInput">First Name</label> -->
   	<input type="text" name="firstnameInput" class="form-control" id="firstNameInput" aria-describedby="firstname" placeholder="Enter First Name">
-
-   </div>
-   <div class="form-group">
-  	<!-- <label for="lastnameInput">Last Name</label> -->
+    
+  </div>
+  <div class="form-group">
+    <!-- <label for="lastnameInput">Last Name</label> -->
   	<input type="text" name="lastNameInput" class="form-control" id="lastNameInput" aria-describedby="username" placeholder="Enter Last Name">
-
-   </div>
+    
+  </div>
+      <div class="form-group">
+        <!-- <label for="exampleInputEmail1">Email address</label> -->
+        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
    <div class="card">
    <div class="form-check">
 
-  <input class="form-check-input form-group" type="radio" name="exampleRadios" id="employeeInput" value="employee" checked>
+  <input class="form-check-input form-group" type="radio" name="exampleRadios" id="employeeInput" value="0" checked>
   <label class="form-check-label" for="exampleRadios1">
     I am an employee.
   </label>
 </div>
 <div class="form-check ">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="financeManagerInput" value="Finance Manager">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="financeManagerInput" value="1">
   <label class="form-check-label" for="exampleRadios2">
   	I am a finance manager.
   </label>
