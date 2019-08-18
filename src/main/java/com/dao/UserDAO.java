@@ -7,18 +7,17 @@ import com.models.User;
 public interface UserDAO {
 	
 	//CREATE
-	public int createUser();
+	public int createUser(User u);
 	
 	//READ
-	public User selectUserById();
+	public User selectUserById(int userId);
 	public List<User> selectAllUsers();
-	public boolean logIn();
 
 	
 	//UPDATE
 	public int updateUser();
 	
 	//DELETE
-	public int deleteUser();
+	public int deleteUser(int userId);
 
 }
