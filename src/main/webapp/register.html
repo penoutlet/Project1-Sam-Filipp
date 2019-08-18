@@ -54,8 +54,8 @@
         <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" required>
         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
-   <div class="card">
-   <div class="form-check">
+   <!-- <div class="card" style="height:100px;"> -->
+   <!-- <div class="form-check">
 
   <input class="form-check-input form-group" type="radio" name="exampleRadios" id="employeeInput" value="0" checked>
   <label class="form-check-label" for="exampleRadios1">
@@ -66,11 +66,22 @@
   <input class="form-check-input" type="radio" name="exampleRadios" id="financeManagerInput" value="1">
   <label class="form-check-label" for="exampleRadios2">
   	I am a finance manager.
-  </label>
-</div>
-</div>
-  <br>  
-  <button type="submit center" class="btn btn-primary">Submit</button>
+  </label> -->
+  <!-- <div class="row"> -->
+
+      <div class="btn-group-toggle radios" data-toggle="buttons">
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2" class="fancy-radios"value=0 autocomplete="off"> Employee
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3" class="fancy-radios" value=1 autocomplete="off"> Finance Manager
+        </label>
+        <!-- </div> -->
+        
+        <!-- </div> -->
+      </div>
+      <br>  
+      <button type="submit center" class="btn btn-primary col-lg-6 center">Submit</button>
 </form>
 </div>
   </div>

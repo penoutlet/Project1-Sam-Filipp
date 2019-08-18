@@ -9,26 +9,38 @@
 // import {cardsHover, navHover} from "employee";
 
 // navHover()
+let fancyRadios = document.getElementsByClassName("fancy-radios");
 
+function getFancyRadios(){
+  let checked=""
+  for(i=0;i<fancyRadios.length;i++){
+    if(fancyRadios[i].checked){
+    checked += fancyRadios[i].value
+    }
+  }
+  console.log(checked)
+  return checked;
+}
 let signUpForm = document.getElementById("registerForm");
 signUpForm.addEventListener("submit", function(e){
-e.preventDefault() // prevents the page from reloading on form-submittal
+  e.preventDefault() // prevents the page from reloading on form-submittal
 	alert("Form submitted")
-let email = document.getElementById("emailInput").value
-let username = document.getElementById("usernameInput").value
-let password = document.getElementById("passwordInput").value
-let firstName = document.getElementById("firstNameInput").value
-let lastName = document.getElementById("lastNameInput").value
+  let email = document.getElementById("emailInput").value
+  let username = document.getElementById("usernameInput").value
+  let password = document.getElementById("passwordInput").value
+  let firstName = document.getElementById("firstNameInput").value
+  let lastName = document.getElementById("lastNameInput").value
+  let checked = getFancyRadios();
 let userObj = {}
 
 
-let radios = document.getElementsByName("exampleRadios")
-let checked = ""
-  for(i=0;i<radios.length;i++){
-    if(radios[i].checked){
-    checked += radios[i].value
-    }
-  }
+// let radios = document.getElementsByName("exampleRadios")
+// let checked = ""
+//   for(i=0;i<radios.length;i++){
+//     if(radios[i].checked){
+//     checked += radios[i].value
+//     }
+//   }
 
   userObj.username = username;
   userObj.password = password;
