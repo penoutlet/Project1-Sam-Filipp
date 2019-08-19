@@ -31,7 +31,7 @@
     <!-- <a class="nav-link active" href="#">View Past Tickets</a> -->
   </li>
   <li class="nav-item">
-    <button class="btn btn-success ticket-btns" data-toggle="modal" data-target="#exampleModal" id="add-new-ticket> Add New Ticket </button>
+    <button class="btn btn-success ticket-btns" data-toggle="modal" data-target="#exampleModal" id="add-new-ticket"> Add New Ticket </button>
     <!-- <a class="nav-link" data-toggle="modal" data-target="#exampleModal" id="add-new-ticket"href="#">Add New Ticket</a> -->
   </li>
   <!-- <li class="nav-item">
@@ -69,32 +69,50 @@
       <div class="modal-body">
 <form id="ticketForm">
 	<div class="form-check">
-		<!-- <label> </label> -->
-		<div> I am seeking reimbursement for...
+    <!-- <label> </label> -->
+    <h4>I am seeking reimursement for... </h4>
+    <div class="row btn-group-toggle radios" data-toggle="buttons">
+        <label class="btn btn-success active fancy-radios" id="option1">
+          <input type="radio" class="fancy-radios"  name="Lodging" value=0 autocomplete="off"> Lodging
+        </label>
+        <label class="btn btn-success fancy-radios" id="option2">
+          <input type="radio" class="fancy-radios"  name="Travel" value=1 autocomplete="off"> Travel
+        </label>
+        <label class="btn btn-success fancy-radios" id="option3">
+            <input type="radio" class="fancy-radios"  name="Food" value=2 autocomplete="off"> Food
+          </label>
+          <label class="btn btn-success fancy-radios" id="option4">
+              <input type="radio" class="fancy-radios"  name="Other" value=3 autocomplete="off"> Other
+            </label>
+        <!-- </div> -->
+        
+        <!-- </div> -->
+      </div>
+		<!-- <div> I am seeking reimbursement for...
 		</div>
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="lodgingTravelInput" value="0">
+  <input class="form-check-input checkme" type="radio" name="Lodging" id="lodgingTravelInput" value="0">
   <label class="form-check-label" for="exampleRadios1">
   	Lodging
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="travelRadioInput" value="1">
+  <input class="form-check-input checkme" type="radio" name="Travel" id="travelRadioInput" value="1">
   <label class="form-check-label" for="exampleRadios2">
   	Travel
   </label>
 </div> 
 <div class="form-check">
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="foodRadioInput" value="2">
+  <input class="form-check-input checkme" type="radio" name="Food" id="foodRadioInput" value="2">
   <label class="form-check-label" for="exampleRadios2">
   	Food
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input checkme" type="radio" name="exampleRadios" id="otherRadioInput" value="3">
+  <input class="form-check-input checkme" type="radio" name="Other" id="otherRadioInput" value="3">
   <label class="form-check-label" for="exampleRadios2">
   	Other
   </label>
-</div>  
+</div>   -->
 <br>
   <div class="form-group">
   	<label for="description of ticket">Describe the issue.</label>

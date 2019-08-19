@@ -14,22 +14,73 @@ submitBtn.addEventListener("click", function(e){
   let ticketAuthor;
   let ticketAmount = document.getElementById("reimbursement-amount").value;
 
-  let radios = document.getElementsByName("exampleRadios")
+  let fancyRadios = document.getElementsByClassName("fancy-radios")
+  let radios = document.getElementsByClassName("checkme")
+  console.log(fancyRadios)
   let checked = ""
-  for(i=0;i<radios.length;i++){
-    if(radios[i].checked){
-      checked += radios[i].value
+  let checkedName = ""
+  // for(i=0;i<radios.length;i++){
+  //   if(radios[i].checked){
+  //     checked += radios[i].value
+  //     checkedName += radios[i].name
+  //     // console.log(radios[i].hasAttribute('fancy-radios'))
+  //   }
+  // }
+  let option1 = document.getElementById("option1")
+  console.log(option1)
+  let option2 = document.getElementById("option2")
+  let option3 = document.getElementById("option3")
+  let option4 = document.getElementById("option4")
+  option1.addEventListener("click", function(){
+     option2.classList.remove("rounded-circle");
+     option3.classList.remove("rounded-circle")
+     option4.classList.remove("rounded-circle")
+     option1.classList.add("rounded-circle")
+  })
+  option2.addEventListener("click", function(){
+    option1.classList.remove("rounded-circle")
+    option3.classList.remove("rounded-circle")
+    option4.classList.remove("rounded-circle")
+   option2.classList.add("rounded-circle")
+  })
+  
+  option3.addEventListener("click", function(){
+    option1.classList.remove("rounded-circle")
+    option2.classList.remove("rounded-circle")
+    option4.classList.remove("rounded-circle")
+   option3.classList.add("rounded-circle")
+  })
+
+  
+  option4.addEventListener("click", function(){
+    option1.classList.remove("rounded-circle")
+    option2.classList.remove("rounded-circle")
+    option3.classList.remove("rounded-circle")
+   option4.classList.add("rounded-circle")
+  })
+  function getFancyRadios(){
+    // let checked=""
+    console.log(fancyRadios[1].value)
+    for(i=0;i<fancyRadios.length;i++){
+      console.log(fancyRadios[i].value)
+      if(fancyRadios[i].checked){
+      checked += fancyRadios[i].value
+      checkedName += fancyRadios[i].name
+      }
     }
+    console.log(checked.value)
+    return checked;
   }
+  console.log(checked + "Checked")
   ticketObj.description = description;
-  ticketObj.reimbursement_type = checked;
+  ticketObj.reimbursement_type = getFancyRadios();
   ticketObj.author = 1;
   ticketObj.ticketAmount = ticketAmount;
   console.log(ticketObj)
   // alert(ticketObj)
-  let longCard = `<div class="card" style="width: 60rem;">
+  let longCard = `<div class="card text-center" style="width: 60rem;">
   <div class="card-body">
-    <h5 class="card-title">${ticketObj.reimbursement_type} $${ticketObj.ticketAmount}</h5>
+    <h5 class="card-title border">${checkedName} $${ticketObj.ticketAmount}</h5>
     <h6 class="card-subtitle mb-2 text-muted">${ticketObj.author}</h6>
     <p class="card-text">${ticketObj.description}.</p>
     <a href="#" class="card-link">More Info</a>
@@ -37,7 +88,7 @@ submitBtn.addEventListener("click", function(e){
 </div>`;
   // ticketObj = JSON.stringify(ticketObj)
   // console.log(JSON.stringify(ticketObj))
-  console.log(longCard)
+  // console.log(longCard)
   ticketArea.insertAdjacentHTML('beforeend', longCard )
 
 
@@ -53,13 +104,7 @@ newTicketForm.addEventListener("submit", function(e){
   let ticketAuthor;
   let ticketAmount = document.getElementById("reimbursement-amount").value;
 
-  let radios = document.getElementsByName("exampleRadios")
-  let checked = ""
-  for(i=0;i<radios.length;i++){
-    if(radios[i].checked){
-      checked += radios[i].value
-    }
-  }
+
   ticketObj.description = description;
   ticketObj.reimbursement_type = checked;
   ticketObj.author = 1;

@@ -9,11 +9,24 @@
 // import {cardsHover, navHover} from "employee";
 
 // navHover()
+
+
 let fancyRadios = document.getElementsByClassName("fancy-radios");
 
+let option1 = document.getElementById("option1")
+let option2 = document.getElementById("option2")
+option1.addEventListener("click", function(){
+   option2.classList.remove("rounded-circle");
+   option1.classList.add("rounded-circle")
+})
+option2.addEventListener("click", function(){
+ option2.classList.add("rounded-circle")
+ option1.classList.remove("rounded-circle")
+})
 function getFancyRadios(){
   let checked=""
   for(i=0;i<fancyRadios.length;i++){
+    console.log(fancyRadios[i].value)
     if(fancyRadios[i].checked){
     checked += fancyRadios[i].value
     }
