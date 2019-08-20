@@ -31,7 +31,7 @@ function getFancyRadios(){
     checked += fancyRadios[i].value
     }
   }
-  console.log(checked)
+  // console.log(checked)
   return checked;
 }
 let signUpForm = document.getElementById("registerForm");

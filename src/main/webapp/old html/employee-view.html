@@ -25,6 +25,7 @@
              </li> 
       </ul>
 <div class="jumbotron text-center" > Welcome Employee </div>
+
 <ul class="nav justify-content-center">
   <li class="nav-item">
       <button class="btn btn-success ticket-btns"> View Past Tickets </button>
@@ -32,29 +33,14 @@
   </li>
   <li class="nav-item">
     <button class="btn btn-success ticket-btns" data-toggle="modal" data-target="#exampleModal" id="add-new-ticket"> Add New Ticket </button>
-    <!-- <a class="nav-link" data-toggle="modal" data-target="#exampleModal" id="add-new-ticket"href="#">Add New Ticket</a> -->
   </li>
-  <!-- <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li> -->
+ 
 </ul>
-<!-- This is where the reimbursement request tickets will populate -->
+
 <br>
 <div class="row center" id="ticket-area" style="width: 60rem; height: 30rem">
-<!-- <div class="card" style="width: 50rem;">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <h6 class="card-subtitle mb-2 text-muted">Welcome Employee</h6>
-      <p class="card-text">Review your tickets or create a new ticket.</p>
-      <a href="#" class="card-link">Ticket Author</a>
-      <a href="#" class="card-link">Resolved by...</a>
-    </div>
-  </div>
-   -->
-</div>
+    
+    <!-- This is where the reimbursement request tickets will populate -->
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -71,17 +57,18 @@
 	<div class="form-check">
     <!-- <label> </label> -->
     <h4>I am seeking reimursement for... </h4>
+    
     <div class="row btn-group-toggle radios" data-toggle="buttons">
-        <label class="btn btn-success active fancy-radios" id="option1">
+        <label class="btn btn-success active fancy-radios" value=0 id="option1">
           <input type="radio" class="fancy-radios"  name="Lodging" value=0 autocomplete="off"> Lodging
         </label>
-        <label class="btn btn-success fancy-radios" id="option2">
+        <label class="btn btn-success fancy-radios" value=1  id="option2">
           <input type="radio" class="fancy-radios"  name="Travel" value=1 autocomplete="off"> Travel
         </label>
-        <label class="btn btn-success fancy-radios" id="option3">
+        <label class="btn btn-success fancy-radios" value=2 id="option3">
             <input type="radio" class="fancy-radios"  name="Food" value=2 autocomplete="off"> Food
           </label>
-          <label class="btn btn-success fancy-radios" id="option4">
+          <label class="btn btn-success fancy-radios" value=3 id="option4">
               <input type="radio" class="fancy-radios"  name="Other" value=3 autocomplete="off"> Other
             </label>
         <!-- </div> -->
@@ -91,7 +78,7 @@
 		<!-- <div> I am seeking reimbursement for...
 		</div>
   <input class="form-check-input checkme" type="radio" name="Lodging" id="lodgingTravelInput" value="0">
-  <label class="form-check-label" for="exampleRadios1">
+  <label class="form-check-label btn btn-primary" for="exampleRadios1">
   	Lodging
   </label>
 </div>
@@ -112,7 +99,7 @@
   <label class="form-check-label" for="exampleRadios2">
   	Other
   </label>
-</div>   -->
+</div>    -->
 <br>
   <div class="form-group">
   	<label for="description of ticket">Describe the issue.</label>
@@ -124,7 +111,7 @@
      <input type="number" name="reimbursement-amount" class="form-control" id="reimbursement-amount" aria-describedat="" placeholder="$0.00">
    </div>
    <div class="modal-footer">
-     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
      <button type="submit button" id="submit-btn" data-dismiss="modal" class="btn btn-primary">Submit</button>
    </div>
 
@@ -133,6 +120,8 @@
     </div>
   </div>
 </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
