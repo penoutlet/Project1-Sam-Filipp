@@ -75,3 +75,4 @@ function addListeners(){
       ticketArea.insertAdjacentHTML('beforeend', longCard )
 
   }
+  

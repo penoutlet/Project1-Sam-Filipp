@@ -35,6 +35,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="src/Jars/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="src/Jars/ojdbc8.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/webapp/WEB-INF/lib/ojdbc7.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

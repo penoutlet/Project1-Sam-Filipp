@@ -30,6 +30,3 @@ function navHover(){
     })
   }
   }
-//   cardsHover()
-  export function navHover();
-  export function cardsHover();
