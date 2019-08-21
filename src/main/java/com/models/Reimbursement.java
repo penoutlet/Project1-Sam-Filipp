@@ -1,14 +1,14 @@
 package com.models;
 
-import java.sql.Blob;
+import java.sql.Date;
 
 public class Reimbursement {
 	int reimbId;
 	double amount;
-	String submitted;
-	String resolved;
+	Date submitted;
+	Date resolved;
 	String description;
-	Blob  receipt;
+	String  receipt;
 	int author;
 	int resolver;
 	int statusId;
@@ -18,8 +18,8 @@ public class Reimbursement {
 		
 	}
 	
-	public Reimbursement(int reimbId, double amount, String submitted, String resolved, String description,
-			Blob receipt, int author, int resolver, int statusId, int typeId) {
+	public Reimbursement(int reimbId, double amount, Date submitted, Date resolved, String description,
+			String receipt, int author, int resolver, int statusId, int typeId) {
 		super();
 		this.reimbId = reimbId;
 		this.amount = amount;
@@ -45,16 +45,16 @@ public class Reimbursement {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public String getSubmitted() {
+	public Date getSubmitted() {
 		return submitted;
 	}
-	public void setSubmitted(String submitted) {
+	public void setSubmitted(Date submitted) {
 		this.submitted = submitted;
 	}
-	public String getResolved() {
+	public Date getResolved() {
 		return resolved;
 	}
-	public void setResolved(String resolved) {
+	public void setResolved(Date resolved) {
 		this.resolved = resolved;
 	}
 	public String getDescription() {
@@ -63,10 +63,10 @@ public class Reimbursement {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Blob getReceipt() {
+	public String getReceipt() {
 		return receipt;
 	}
-	public void setReceipt(Blob receipt) {
+	public void setReceipt(String receipt) {
 		this.receipt = receipt;
 	}
 	public int getAuthor() {

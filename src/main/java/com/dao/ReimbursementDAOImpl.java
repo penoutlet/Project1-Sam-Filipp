@@ -14,28 +14,37 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
 	private static String url = "jdbc:oracle:thin:@db0715javausf.chts6t7vjaia.us-east-2.rds.amazonaws.com:1521:orcl";
 	private static String username = "user0715java";
 	private static String password = "p4ssw0rd";
+	
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 
 	@Override
-	public int createReimbursement(Reimbursement r) {
+	public boolean createReimbursement(Reimbursement r) {
 		try (Connection conn = DriverManager.getConnection(url, username, password)) {
 
 		PreparedStatement ps = conn.prepareStatement("INSERT INTO Reimbursement VALUES(?,?,?,?,?,?,?,?,?,?)");
 		ps.setInt(1, r.getReimbId());
 		ps.setDouble(2, r.getAmount());
-		ps.setString(3,r.getSubmitted());
-		ps.setString(4, r.getResolved());
+		ps.setDate(3,r.getSubmitted());
+		ps.setDate(4, r.getResolved());
 		ps.setString(5, r.getDescription());
-		ps.setBlob(6,r.getReceipt());
+		ps.setString(6,r.getReceipt());
 		ps.setInt(7,r.getAuthor());
 		ps.setInt(8,r.getResolver());
 		ps.setInt(9,r.getStatusId());
 		ps.setInt(10,r.getTypeId());
 		ps.executeUpdate();
+		return true;
 		
 	} catch (SQLException ex) {
 		ex.printStackTrace();
 	}
-	return 0;
+	return false;
 	}
 	
 
@@ -49,8 +58,8 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
 
 		ResultSet rs = ps.executeQuery();
 		while (rs.next()) {
-			r = new Reimbursement(rs.getInt(1), rs.getDouble(2), rs.getString(3), rs.getString(4), rs.getString(5),
-					rs.getBlob(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10));
+			r = new Reimbursement(rs.getInt(1), rs.getDouble(2), rs.getDate(3), rs.getDate(4), rs.getString(5),
+					rs.getString(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10));
 		}
 
 	} catch (SQLException e) {
@@ -66,8 +75,8 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
 			PreparedStatement ps = conn.prepareStatement("SELECT * FROM Reimbursement");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				r.add(new Reimbursement(rs.getInt(1), rs.getDouble(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getBlob(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
+				r.add(new Reimbursement(rs.getInt(1), rs.getDouble(2), rs.getDate(3), rs.getDate(4), rs.getString(5),
+						rs.getString(6), rs.getInt(7), rs.getInt(8), rs.getInt(9), rs.getInt(10)));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -83,16 +92,17 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
 	}
 
 	@Override
-	public int deleteReimbursement(int reimbId) {
+	public boolean deleteReimbursement(int reimbId) {
 		try (Connection conn = DriverManager.getConnection(url, username, password)) {
 
-			PreparedStatement ps = conn.prepareStatement("DELETE FROM Reimbursement WHERE reim_id=?");
+			PreparedStatement ps = conn.prepareStatement("DELETE FROM Reimbursement WHERE reimb_id=?");
 			ps.setInt(1, reimbId);
 			ps.executeUpdate();
+			return true;
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
-		return 0;
+		return false;
 	}
 
 }

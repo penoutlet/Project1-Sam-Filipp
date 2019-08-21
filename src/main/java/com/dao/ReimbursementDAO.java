@@ -7,7 +7,7 @@ import com.models.Reimbursement;
 public interface ReimbursementDAO {
 	
 	//CREATE
-	public int createReimbursement(Reimbursement r);
+	public boolean createReimbursement(Reimbursement r);
 	
 	//READ
 	public Reimbursement selectReimById(int reimbId);
@@ -17,6 +17,6 @@ public interface ReimbursementDAO {
 	public int updateReimbursement();
 	
 	//DELETE
-	public int deleteReimbursement(int reimbId);
+	public boolean deleteReimbursement(int reimbId);
 
 }

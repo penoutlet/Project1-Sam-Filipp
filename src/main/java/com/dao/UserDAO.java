@@ -7,7 +7,7 @@ import com.models.User;
 public interface UserDAO {
 	
 	//CREATE
-	public int createUser(User u);
+	public boolean createUser(User u);
 	
 	//READ
 	public User selectUserById(int userId);
@@ -18,6 +18,6 @@ public interface UserDAO {
 	public int updateUser();
 	
 	//DELETE
-	public int deleteUser(int userId);
+	public boolean deleteUser(int userId);
 
 }

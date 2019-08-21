@@ -19,7 +19,7 @@ CREATE TABLE Reimbursement(
     submitted TIMESTAMP,
     resolved TIMESTAMP,
     description VARCHAR2(1000),
-    receipt BLOB,
+    receipt VARCHAR2(100),
     author NUMBER,
     resolver NUMBER,
     status_id NUMBER,
@@ -40,4 +40,7 @@ CREATE TABLE ReimbursementType(
     reimb_type VARCHAR2(100)
 );
 
-SELECT * FROM Reimbursement;
+SELECT * FROM ReimbursementStatus;
+
+INSERT INTO users VALUES(0,'user','pass','first','last', 'email',0);
+TRUNCATE TABLE Users;
